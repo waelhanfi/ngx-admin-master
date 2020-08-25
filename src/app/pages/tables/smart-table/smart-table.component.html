@@ -1,0 +1,27 @@
+<div id="div" >
+  <div style="display: block" style="width: 40%;">
+    <canvas baseChart 
+    [datasets]="barChartData" 
+    [labels]="barChartLabels"
+    [options]="barChartOptions" 
+    [legend]="barChartLegend" 
+    [chartType]="barChartType" >
+    </canvas>
+  </div>
+
+
+
+  <nb-card>
+
+
+    <nb-card-body>
+
+      <div #TABLE>
+        <button class="btn btn-default" (click)="exportAsExcel()">Export as Excel</button>
+        <ng2-smart-table [settings]="settings" id="exportable" [source]="source">
+        </ng2-smart-table>
+      </div>
+
+
+    </nb-card-body>
+  </nb-card>
